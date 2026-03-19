@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Arial Black', Gadget, sans-serif; /* Fonte robusta similar à imagem */
+    font-family: 'Arial Black', Gadget, sans-serif;
 }
 
 body {
@@ -11,6 +11,16 @@ body {
     align-items: center;
     min-height: 100vh;
     background-color: #f0f0f0;
+}
+
+h3 {
+    font-size: 90px;
+    text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
+}
+
+p {
+    font-size: 10px;
+    text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
 }
 
 .anuncio-container {
@@ -24,7 +34,6 @@ body {
     text-align: center;
 }
 
-/* Estilização dos Títulos */
 .titulo-principal {
     font-size: 32px;
     color: #000;
@@ -39,11 +48,10 @@ body {
     text-shadow: 1px 1px #fff;
 }
 
-/* Círculos de Informação */
 .circulo-info {
+    margin-top: 20px;
     border: 2px solid #000;
     border-radius: 50%;
-    background-color: rgba(255, 255, 255, 0.2);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -52,16 +60,37 @@ body {
     width: 160px;
     height: 160px;
 }
+/* Estilo geral comum aos dois círculos */
+.circulo-info {
+    margin-top: 20px;
+    border: 2px solid #000;
+    border-radius: 50%; /* Mantém o formato circular */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 15px;
+    position: absolute;
+    width: 160px;
+    height: 160px;
+    z-index: 2; /* Garante que fiquem acima de outros elementos */
+}
 
-.camera {
+/* Alterações exclusivas para o círculo da CÂMERA */
+.estilo-camera {
     top: 150px;
     right: 20px;
+    background-color: rgb(14, 171, 199); /* Azul original */
+    border: 3px solid #000;
 }
 
-.energia {
-    bottom: 120px;
+/* Alterações exclusivas para o círculo de ENERGIA */
+.estilo-energia {
+    bottom: 80px;
     left: 20px;
+     background-color: rgb(14, 171, 199); /* Azul original */
+    border: 3px solid #000;
 }
+
 
 .circulo-info h3 {
     font-size: 12px;
@@ -74,7 +103,6 @@ body {
     font-weight: bold;
 }
 
-/* Seção de Preço */
 .preco-container {
     position: absolute;
     right: 30px;
@@ -92,20 +120,20 @@ body {
     text-shadow: 2px 2px #fff;
 }
 
-/* Imagens */
 .img-celular-topo {
     position: absolute;
-    top: 110px;
-    left: -20px;
-    width: 130px;
-    transform: rotate(-10deg);
+    bottom: 180px;
+    right: 60px;
+    width: 350px;
+    transform: rotate(7deg);
+    transform-origin: center; 
 }
 
 .img-celular-base {
     position: absolute;
     bottom: -10px;
     right: -10px;
-    width: 150px;
+    width: 230px;
     border-radius: 20px;
 }
 
@@ -117,6 +145,7 @@ footer {
 }
 
 .contato-box {
+    width: 210px;
     background-color: rgba(255, 255, 255, 0.5);
     border: 1px solid #000;
     border-radius: 15px;
